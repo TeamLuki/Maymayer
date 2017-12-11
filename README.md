@@ -1,11 +1,9 @@
-# Maymayer
+# Maymayer: Kaniel Edition
 
-A multipurpose bot maintained by TheLBall.
-
-### Please wait for the actual bot files as the bot is being worked on.
+This version of Maymayer is made and hosted by Kanielyochanan.
 
 ## Invite
 
-(Use this unless you want to self-host it.)
+COMING SOON
 
-https://discordapp.com/oauth2/authorize?client_id=367072821160968194&scope=bot&permissions=2146958591
+## More Information
