@@ -7,7 +7,9 @@ We are always working on it and updating it.
 https://discordapp.com/oauth2/authorize?client_id=367072821160968194&scope=bot&permissions=2146958591
 # Prerequisites
 Python 3
+
 discord module
+
 bot token
 # Setup
 First, replace the text in token.txt with your bot token and the marked text in cogs/utils/checks.py with your bot owner's ID.
