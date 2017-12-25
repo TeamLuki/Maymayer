@@ -21,4 +21,3 @@ Turn on developer mode in Discord's settings. Then right click the bot owner and
 ### OK, back to the readme.
 
 Then run bot.py. It's that simple!
-testing webhooks
