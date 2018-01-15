@@ -6,5 +6,5 @@ def is_owner_check(message):
     return message.author.id == 'Replace this with the bot owners id'
 
 def is_owner():
-    return commands.check(lambda ctx: is_owner_check(ctx.message))
+    return commands.check(is_owner_check)
 
