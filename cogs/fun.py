@@ -25,12 +25,12 @@ class Fun():
         cat = cat.replace("\\", "")
         return cat
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def dog(self, ctx):
         """Gets a random dog from http://random.dog"""
         color = discord.Color.default()
-        if ctx.message.server is not None:
-            color = ctx.message.server.me.color
+        if ctx.message.guild is not None:
+            color = ctx.message.guild.me.color
         embed = discord.Embed(color=color)
         embed.title = "Random Dog"
 
@@ -41,14 +41,14 @@ class Fun():
                 break
         embed.set_footer(text="{}".format("http://random.dog/" + str(dog)))
         embed.set_image(url="http://random.dog/" + str(dog))
-        await self.bot.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def cat(self, ctx):
         """Gets a random cat from http://random.cat"""
         color = discord.Color.default()
-        if ctx.message.server is not None:
-            color = ctx.message.server.me.color
+        if ctx.message.guild is not None:
+            color = ctx.message.guild.me.color
         embed = discord.Embed(color=color)
         embed.title = "Random Cat"
         cat = "null"
@@ -58,17 +58,17 @@ class Fun():
                 break
         embed.set_footer(text="{}".format(str(cat)))
         embed.set_image(url=str(cat))
-        await self.bot.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
     @commands.command()
-    async def bestconsole(self):
+    async def bestconsole(self, ctx):
         '''Tells you the best console.'''
-        await self.bot.say("**The PS Triple is the best console.**")
+        await ctx.send("**The PS Triple is the best console.**")
 
     @commands.command()
-    async def kill(self, username: discord.User):
+    async def kill(self, ctx, username: discord.User):
         '''Don't tell the government.'''
-        await self.bot.say("**I have successfully murdered " + str(username) + ".**")
+        await ctx.send("**I have successfully murdered " + str(username) + ".**")
 
 
 def setup(bot):
