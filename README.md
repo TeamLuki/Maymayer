@@ -1,4 +1,5 @@
-# Maymayer
+# Maymayer Rewrite
+This rewrite is not functional yet.
 A multipurpose bot created by Luki and maintained by TheLBall.
 We are always working on it and updating it.
 # Invite
