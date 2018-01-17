@@ -8,38 +8,38 @@ class Moderation():
     def __init__(self, bot):
         self.bot = bot
 
-    async def process_deletion(self, messages):
+    async def process_deletion(self, messages, channel):
         while messages:
             if len(messages) > 1:
-                await ctx.message.channel(messages[:100])
+                await channel.delete_messages(messages[:100])
                 messages = messages[100:]
             else:
-                await messages.delete_message(messages[0])
+                await messages.delete()
                 messages = []
             await asyncio.sleep(1.5)
 
     @commands.command()
     @commands.has_permissions(manage_messages = True)
     async def prune(self, ctx, number: int):
-        """Deletes the specified amount of messages."""
+        """Deletes the specified number of messages."""
 
         if ctx.invoked_subcommand is None:
             channel = ctx.message.channel
             author = ctx.message.author
             server = author.guild
             is_bot = self.bot.user.bot
-            has_permissions = channel.permissions_for(guild.me).manage_messages
+            has_permissions = channel.permissions_for(server.me).manage_messages
 
             to_delete = []
 
             if not has_permissions:
-                await self.bot.say("I'm not allowed to delete messages.")
+                await ctx.send("I am not able to delete messages.")
                 return
 
-            async for message in self.bot.logs_from(channel, limit=number+1):
+            async for message in channel.history(limit=number+1):
                 to_delete.append(message)
 
-            await self.process_deletion(to_delete)
+            await self.process_deletion(to_delete, ctx.message.channel)
             if number == 1:
                 await ctx.send("**Successfully pruned 1 message.**")
                 return
