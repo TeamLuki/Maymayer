@@ -6,17 +6,17 @@ We are always working on it and updating it.
 
 https://discordapp.com/oauth2/authorize?client_id=367072821160968194&scope=bot&permissions=2146958591
 # Prerequisites
-Python 3
+Python 3.6 (get here: python.org)
 
-discord module
+discord.py rewrite (paste this in your terminal: python3 -m pip install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice] )
 
-bot token
+Bot Application (make one here: 
 # Setup
-First, replace the text in token.txt with your bot token and the marked text in cogs/utils/checks.py with your bot owner's ID.
+First, replace the text in token.txt with your bot token and the marked text in cogs/utils/checks.py with your ID.
 
 ### But how do I get that?
 
-Turn on developer mode in Discord's settings. Then right click the bot owner and click Copy ID. This is your bot owner's ID.
+Turn on developer mode in Discord's settings. Then right click yourself and click Copy ID. This is your ID.
 
 ### OK, back to the readme.
 
