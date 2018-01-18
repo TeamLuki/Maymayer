@@ -8,7 +8,8 @@ https://discordapp.com/oauth2/authorize?client_id=367072821160968194&scope=bot&p
 # Prerequisites
 Python 3.6 (get here: python.org)
 
-discord.py rewrite (paste this in your terminal: "python3 -m pip install discord.py[voice]")
+discord.py
+(paste this in your terminal: "python3 -m pip install discord.py[voice]")
 
 Bot Application (make one here: 
 # Setup
