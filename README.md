@@ -11,7 +11,7 @@ Python 3.6 (get here: python.org)
 discord.py
 (paste this in your terminal: "python3 -m pip install discord.py[voice]")
 
-Bot Application (make one here: 
+Bot Application (make one here: https://discordapp.com/developers/applications/me/create)
 # Setup
 First, replace the text in token.txt with your bot token and the marked text in cogs/utils/checks.py with your ID.
 
