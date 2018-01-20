@@ -54,5 +54,6 @@ async def on_message(message):
                 await message.channel.send("**But I had an anti-alt!**")
                 return
             await message.channel.send("**thi**s is a** chri**sitan :b:e**rver no :b:u**rsing. go**t it?** :ok_hand:")
+    await bot.process_commands(message)
     
 bot.run(token, bot=True, reconnect=True)
