@@ -37,4 +37,22 @@ async def on_ready():
     await bot.change_presence(game=discord.Game(name='m!help • https://discord.gg/GzNH2sB'.format(len(bot.guilds))))
     print('Maymayer has successfully logged in.')
     
+@bot.event
+async def on_message(message):
+    if message.author.id not in bot.user.id:
+        if "frick".upper() in message.content.upper():
+            if message.author.id == 319503910895222784:
+                await message.channel.send("**all hail master** :pray:")
+                return
+            elif message.author.id == 201745963394531328:
+                await message.channel.send("It's everyday bro with the Disney Channel flow **or is it**")
+                return
+            elif message.author.id == 304775824182083585:
+                await message.channel.send("**But I had an antiswear!**")
+                return
+            elif message.author.id == 350285525195816970:
+                await message.channel.send("**But I had an anti-alt!**")
+                return
+            await message.channel.send("**thi**s is a** chri**sitan :b:e**rver no :b:u**rsing. go**t it?** :ok_hand:")
+    
 bot.run(token, bot=True, reconnect=True)
