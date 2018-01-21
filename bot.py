@@ -21,7 +21,7 @@ logger.addHandler(handler)
 with open("token.txt","r") as tokenfile:
     token = tokenfile.read().replace('\n','')
 description = '''Maymayer - Hip with the kiddest discord bot created by Luki and maintained by TheLBall.'''
-startup_extensions = ["cogs.general", "cogs.fun", "cogs.mod", "cogs.math"]
+startup_extensions = ["cogs.general", "cogs.fun", "cogs.mod", "cogs.math", "cogs.admin"]
 bot = commands.AutoShardedBot(command_prefix=['meme ', 'm!'], description=description)
 
 if __name__ == "__main__":
