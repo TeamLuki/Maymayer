@@ -21,7 +21,7 @@ class Admin():
             'bot': self.bot,
             'ctx': ctx,
             'message': ctx.message,
-            'server': ctx.message.guild,
+            'guild': ctx.message.guild,
             'channel': ctx.message.channel,
             'author': ctx.message.author
         }
@@ -36,7 +36,7 @@ class Admin():
             await ctx.send(python.format(type(e).__name__ + ': ' + str(e)))
             return
 
-        await self.bot.say(python.format(result))
+        await ctx.send(python.format(result))
         
 def setup(bot):
     bot.add_cog(Admin(bot))
