@@ -1,5 +1,5 @@
 ###################################################################
-# Maymayer - A Discord bot made by DreamLive Inc. (mostly Kaniel) #
+# Maymayer - A Discord bot made by Luki (mostly Kaniel) #
 # I have no life. I have no life. I have no life. I have no life. #
 ###################################################################
 
