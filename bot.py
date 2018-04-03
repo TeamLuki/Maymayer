@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='m!help • https://discord.gg/GzNH2sB'.format(len(bot.guilds))))
+    await bot.change_presence(activity=discord.Game(name='m!help • https://discord.gg/GzNH2sB'.format(len(bot.guilds))))
     print('Maymayer has successfully logged in.')
     
 @bot.event
